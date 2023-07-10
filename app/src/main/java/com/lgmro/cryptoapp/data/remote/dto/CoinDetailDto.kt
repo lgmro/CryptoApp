@@ -30,8 +30,8 @@ data class CoinDetailDto(
     val openSource: Boolean,
     @SerializedName("org_structure")
     val orgStructure: String,
-    @SerializedName("org_structure")
-    val proof_type: String,
+    @SerializedName("proof_type")
+    val proofType: String,
     val rank: Int,
     @SerializedName("started_at")
     val startedAt: String,

@@ -2,8 +2,6 @@ package com.lgmro.cryptoapp.di
 
 import com.lgmro.cryptoapp.common.Constants
 import com.lgmro.cryptoapp.data.remote.CoinPaprikaApi
-import com.lgmro.cryptoapp.data.repository.CoinRepositoryImpl
-import com.lgmro.cryptoapp.domain.repository.CoinRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,7 +12,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object RetrofitModule {
     @Provides
     @Singleton
     fun providePaprikaApi(): CoinPaprikaApi {
@@ -23,11 +21,5 @@ object AppModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CoinPaprikaApi::class.java)
-    }
-
-    @Provides
-    @Singleton
-    fun provideCoinRepository(api: CoinPaprikaApi): CoinRepository {
-        return CoinRepositoryImpl(api)
     }
 }

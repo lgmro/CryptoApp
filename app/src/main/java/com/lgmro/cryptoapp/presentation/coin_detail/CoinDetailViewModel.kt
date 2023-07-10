@@ -1,5 +1,6 @@
 package com.lgmro.cryptoapp.presentation.coin_detail
 
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
@@ -23,6 +24,7 @@ class CoinDetailViewModel @Inject constructor(
 
     init {
         savedStateHandle.get<String>(Constants.PARAM_COIN_ID)?.let { coinId ->
+            Log.d("LucasMarinho", "id: ${coinId}")
             getCoins(coinId)
         }
     }
