@@ -9,13 +9,10 @@ import androidx.lifecycle.viewModelScope
 import com.lgmro.cryptoapp.common.Constants
 import com.lgmro.cryptoapp.common.Resource
 import com.lgmro.cryptoapp.domain.use_case.get_coin.GetCoinUseCase
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import javax.inject.Inject
 
-@HiltViewModel
-class CoinDetailViewModel @Inject constructor(
+class CoinDetailViewModel(
     private val getCoinUseCase: GetCoinUseCase,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {

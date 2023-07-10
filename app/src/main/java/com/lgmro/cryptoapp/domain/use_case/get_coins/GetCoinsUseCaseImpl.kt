@@ -8,9 +8,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
-import javax.inject.Inject
 
-class GetCoinsUseCaseImpl @Inject constructor(
+class GetCoinsUseCaseImpl(
     private val repository: CoinRepository
 ) : GetCoinsUseCase {
     override fun invoke(): Flow<Resource<List<Coin>>> = flow {

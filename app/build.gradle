@@ -1,8 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.google.dagger.hilt.android'
-    id 'kotlin-kapt'
 }
 
 android {
@@ -46,10 +44,6 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
-
-    kapt {
-        correctErrorTypes true
-    }
 }
 
 dependencies {
@@ -86,10 +80,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
 
-    //Dagger - Hilt
-    implementation "com.google.dagger:hilt-android:2.44"
-    implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
-    kapt "com.google.dagger:hilt-android-compiler:2.44"
+    //Koin
+    implementation "io.insert-koin:koin-android:3.4.0"
+    implementation "io.insert-koin:koin-androidx-compose:3.4.0"
 
 
     // Retrofit

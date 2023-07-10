@@ -13,9 +13,7 @@ import com.lgmro.cryptoapp.presentation.Screen
 import com.lgmro.cryptoapp.presentation.coin_detail.CoinDetailScreen
 import com.lgmro.cryptoapp.presentation.coin_list.CoinListScreen
 import com.lgmro.cryptoapp.presentation.ui.theme.CryptoAppTheme
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

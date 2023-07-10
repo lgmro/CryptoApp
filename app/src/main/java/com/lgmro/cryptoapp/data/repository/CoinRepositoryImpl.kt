@@ -4,9 +4,8 @@ import com.lgmro.cryptoapp.data.remote.CoinPaprikaApi
 import com.lgmro.cryptoapp.data.remote.dto.CoinDetailDto
 import com.lgmro.cryptoapp.data.remote.dto.CoinDto
 import com.lgmro.cryptoapp.domain.repository.CoinRepository
-import javax.inject.Inject
 
-class CoinRepositoryImpl @Inject constructor(
+class CoinRepositoryImpl(
     private val api: CoinPaprikaApi
 ) : CoinRepository {
     override suspend fun getCoins(): List<CoinDto> {

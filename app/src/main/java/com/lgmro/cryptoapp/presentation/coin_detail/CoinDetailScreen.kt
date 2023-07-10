@@ -23,14 +23,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.flowlayout.FlowRow
 import com.lgmro.cryptoapp.presentation.coin_detail.components.CoinTag
 import com.lgmro.cryptoapp.presentation.coin_detail.components.TeamListItem
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun CoinDetailScreen(
-    viewModel: CoinDetailViewModel = hiltViewModel()
+    viewModel: CoinDetailViewModel = koinViewModel()
 ) {
     val state = viewModel.state.value
     Box(
